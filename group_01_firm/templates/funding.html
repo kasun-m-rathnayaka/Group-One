@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Funding</h1>
+<form action="{% url 'funding' %}" method="post">
+    {% csrf_token %}
+    <label for="amount">Name</label>
+    <input type="text" name="name" id="amount"><br/>
+    <label for="amount">CPM</label>
+    <input type="text" name="cpm" id="amount"><br/>
+    <label for="amount">Amount</label>
+    <input type="text" name="investment" id="amount"><br/>
+    <button type="submit">Submit</button>
+</form>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>CPM</th>
+            <th>Amount</th>
+        </tr>
+        {% for funding in fundings %}
+        <tr>
+            <td>{{ funding.name }}</td>
+            <td>{{ funding.cpm }}</td>
+            <td>{{ funding.investment }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
