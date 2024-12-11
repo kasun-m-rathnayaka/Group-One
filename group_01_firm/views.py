@@ -36,3 +36,13 @@ def history(request,pk):
     }
     print(context)
     return render(request, 'history.html', context)
+
+
+def consultent1(request):
+    return render(request, 'consultant1.html')
+
+def consultent2(request):
+    return render(request, 'consultant2.html')
+
+def consultent3(request):
+    return render(request, 'consultant3.html')

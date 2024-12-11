@@ -110,9 +110,9 @@
                 <ul>
                     <ul>
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="consultant1.html">Consultant 1</a></li>
-                        <li><a href="consultant2.html">Consultant 2</a></li>
-                        <li><a href="consultant3.html">Consultant 3</a></li>
+                        <li><a href="{% url 'consultant1' %}">Consultant 1</a></li>
+                        <li><a href="{% url 'consultant2' %}">Consultant 2</a></li>
+                        <li><a href="{% url 'consultant3' %}">Consultant 3</a></li>
                     </ul>
                     
                 </ul>
@@ -129,7 +129,7 @@
 
     <section class="about">
         <div class="container">
-            <h2>About Us</h2>
+            <a href="{% url 'funding' %}"> <h2>Visit Funding page</h2></a>
             <p>At 01-Firm, we partner with clients to identify challenges and implement strategies that unlock their full potential. Our expert team focuses on practical, data-driven results, empowering businesses to navigate complex landscapes and achieve sustainable success.</p>
         </div>
     </section>
