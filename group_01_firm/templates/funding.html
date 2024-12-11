@@ -21,7 +21,7 @@
         </tr>
         {% for funding in fundings %}
         <tr>
-            <td>{{ funding.name }}</td>
+             <td><a href="{% url 'history' funding.id %}">{{ funding.name }}</a></td>
             <td>{{ funding.cpm }}</td>
             <td>{{ funding.investment }}</td>
         </tr>

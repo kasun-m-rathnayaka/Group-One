@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>History</h1>
+    <table>
+    <tr>
+        <th>Date</th>
+        <th>Investment</th>
+    </tr>{% for con in context %}
+    <tr>
+
+            <td>{{ con.created_at }}</td>
+            <td>{{ con.investment }}</td>
+
+    </tr> {% endfor %}
+    </table>
+{% endblock %}

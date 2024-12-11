@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Firm
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def funding(request):
@@ -26,3 +27,12 @@ def contact(request):
 
 def about(request):
     return render(request, 'about.html')
+
+
+def history(request,pk):
+    data = Firm.objects.all()
+    context = {
+        'context': data
+    }
+    print(context)
+    return render(request, 'history.html', context)
